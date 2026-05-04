@@ -10,42 +10,6 @@ An AI-powered system that maps natural language queries to relevant Bureau of In
 
 Run the setup script once before anything else. It creates the virtual environment, installs all dependencies, and then runs inference automatically.
 
-Windows (PowerShell or Command Prompt):
-
-```bat
-start.bat
-```
-
-Mac/Linux:
-
-```bash
-chmod +x start.sh && ./start.sh
-```
-
-The script handles:
-
-- Python 3.11 version check
-- Virtual environment creation (`venv/`)
-- Dependency installation from `requirements.txt`
-- Inference execution
-
-### Step 2 — Required Command (Hackathon Evaluation)
-
-If the environment is already set up and you only need to re-run inference:
-
-```bash
-python inference.py --input hidden_private_dataset.json --output team_results.json
-```
-
-This command will:
-
-- Load the prebuilt index
-- Process all queries from the input file
-- Retrieve the most relevant BIS standards
-- Save results to the specified output file
-
----
-
 ## Environment Setup
 
 ### 1. Python Version
@@ -79,7 +43,20 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
+## Run Inference
+
+If the environment is already set up and you only need to re-run inference:
+
+```bash
+python inference.py --input hidden_private_dataset.json --output team_results.json
+```
 ---
+
+## Evaluation
+
+```bash
+python eval_script.py --results team_results.json
+```
 
 ## Web Interface (Optional)
 
@@ -159,7 +136,7 @@ data/index/faiss.index
 If missing, rebuild it:
 
 ```bash
-python build_index.py --chunks data/bis_all_chunks.json
+python build_index.py --chunks data/chunks.json
 ```
 
 ---
@@ -178,13 +155,7 @@ python build_index.py --chunks data/bis_all_chunks.json
 ]
 ```
 
----
 
-## Evaluation
-
-```bash
-python eval_script.py --results team_results.json
-```
 
 ### Metrics
 
