@@ -124,7 +124,7 @@ The system was evaluated on 100 queries with strong performance across all key m
 - **Average Latency**: 0.05 sec (Target: <5 sec)
 
 ###  Evaluation Screenshot
-![Evaluation Results](assets/evaluation_results.png)
+![Evaluation Results](image.png)
 
 ## Project Structure
 
