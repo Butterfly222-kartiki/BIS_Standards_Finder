@@ -21,13 +21,13 @@ Python 3.11
 ### 2. Create Virtual Environment
 
 ```bash
-python3.11 -m venv venv
+ py -3.11 -m venv venv 
 ```
 
 Activate on Windows:
 
 ```bat
-venv\Scripts\activate.bat
+venv\Scripts\activate
 ```
 
 Activate on Mac/Linux:
