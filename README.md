@@ -66,7 +66,27 @@ A hosted interface is available for interactive testing:
 https://mse-hackathon.web.app/
 ```
 
-> If the FAISS index is present, the system works directly. If the index is not found, enter a valid API key in the UI input field.
+> If the FAISS index is present, the system works directly. If the index is not found, please see below
+
+## 🔑 Groq API Key (Optional – Smart Rationale Generation)
+
+To enable AI-powered reasoning and smart explanations in the UI, you can provide a Groq API key.
+
+###  How to Use
+1. Open the web interface  
+2. Locate the **API Key input field**  
+3. Paste your Groq API key  
+4. Run your query — the system will now generate **enhanced rationales using LLMs**
+
+### 🔗 Get Your API Key
+You can generate your API key from:
+
+👉 :contentReference[oaicite:0]{index=0} — https://console.groq.com/
+
+###  Notes
+- If no API key is provided → the system will still work using **retrieval-only mode**
+- If API key is provided → enables **LLM-based explanation (smart rationale generation)**
+- Your key is **not stored** and is only used during the session
 
 ---
 
@@ -93,8 +113,18 @@ https://mse-hackathon.web.app/
 5. Part-number prioritization
 6. Final result selection
 ```
-
 ---
+##  Evaluation Results
+
+The system was evaluated on 100 queries with strong performance across all key metrics.
+
+###  Metrics
+- **Hit Rate @3**: 99.00% (Target: >80%)  
+- **MRR @5**: 0.9450 (Target: >0.7)  
+- **Average Latency**: 0.05 sec (Target: <5 sec)
+
+###  Evaluation Screenshot
+![Evaluation Results](assets/evaluation_results.png)
 
 ## Project Structure
 
